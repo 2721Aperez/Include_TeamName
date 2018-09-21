@@ -13,6 +13,7 @@ public:
     void displayRules();
     void setPlayerMove(Bhn_Moves);
     void setComputerMove(Bhn_Moves);
+    
     Bhn_Moves getPlayerMove() const;
     Bhn_Moves getComputerMove() const;
 };
