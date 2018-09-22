@@ -5,7 +5,7 @@
 class RockPaperScissor{
 private:
     Rps_Moves player_move, computer_move;
-    Rps_Moves compareMoves(Rps_Moves, ...);
+    Rps_Moves compareMoves();
     void displayMoves();
 
 public:
