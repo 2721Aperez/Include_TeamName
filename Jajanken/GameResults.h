@@ -21,6 +21,7 @@ public:
     void getCompWins() const;
     void getCompLoss() const;
 
+    void setTies(int);
     void getTies() const;
 
 };
