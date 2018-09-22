@@ -30,16 +30,51 @@ Rps_Moves RockPaperScissor::compareMoves()
     {
         case Rps_Moves::ROCK:
             if(comp == Rps_Moves::ROCK) {results.setTies(1);}
+
             else if(comp == Rps_Moves::PAPER)
             {
+                results.addPlayerLoss(1);
+                results.addCompWin(1);
                 
             }
             else if(comp == Rps_Moves::SCISSORS)
             {
-                
+                results.addPlayerWin(1);
+                results.addCompLoss(1);          
             }
         break;
 
+        case Rps_Moves::PAPER:
+            if(comp == Rps_Moves::PAPER) {results.setTies(1);}
+
+            else if(comp == Rps_Moves::SCISSORS)
+            {
+                results.addPlayerLoss(1);
+                results.addCompWin(1);
+            }
+            else if(comp == Rps_Moves::ROCK)
+            {
+                results.addPlayerWin(1);
+                results.addCompLoss(1);          
+            }
+        break;
+        case Rps_Moves::SCISSORS:
+            if(comp == Rps_Moves::SCISSORS) {results.setTies(1);}
+
+            else if(comp == Rps_Moves::ROCK)
+            {
+                results.addPlayerLoss(1);
+                results.addCompWin(1);
+            }
+            else if(comp == Rps_Moves::PAPER)
+            {
+                results.addPlayerWin(1);
+                results.addCompLoss(1);          
+            }
+        break;
+        default:  break;
     }
+
+    return player; //Placeholder
 
 }
