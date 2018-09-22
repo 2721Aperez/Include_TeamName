@@ -9,6 +9,12 @@ public:
     void setPlayerWins(int);
     void setPlayerLoss(int);
 
+    void addPlayerWin(int);
+    void addPlayerLoss(int);
+
+    void addCompWin(int);
+    void addCompLoss(int);
+    
     void setCompWins(int);
     void setCompLoss(int);
 
