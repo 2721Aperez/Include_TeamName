@@ -13,5 +13,6 @@ private:
     std::string snarkyComment();
 public:
     void selectMove(); 
+    void selectMoveV2();
 };
 #endif
