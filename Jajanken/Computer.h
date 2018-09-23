@@ -11,7 +11,7 @@ private:
     BearHunterNinja move_v2;
     void displaySelectedMove();
     std::string snarkyComment();
-public:
+protected:
     void selectMove(); 
     void selectMoveV2();
 };
