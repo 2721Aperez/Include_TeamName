@@ -2,6 +2,7 @@
 #define BEARHUNTERNINJA_H_
 
 #include "Bhn_Moves.h"
+#include "GameResults.h"
 
 class BearHunterNinja{
 
