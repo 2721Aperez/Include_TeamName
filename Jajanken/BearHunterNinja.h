@@ -3,12 +3,14 @@
 
 #include "Bhn_Moves.h"
 #include "GameResults.h"
-
+#include <iostream>
+#include <cstdlib> 
 class BearHunterNinja{
 
 private:
     Bhn_Moves player_move, computer_move;
     Bhn_Moves compareMoves();
+    Bhn_Moves genCompMove();
     void displayMove();
 public:
     void displayRules();
