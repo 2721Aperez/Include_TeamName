@@ -12,7 +12,16 @@ void RockPaperScissor::displayRules()
 
 void RockPaperScissor::setPlayerMove(Rps_Moves player) {player_move = player;}
 
-void RockPaperScissor::setComputerMove(Rps_Moves computer) {computer_move = computer;}
+Rps_Moves RockPaperScissor::genCompMove()
+{
+    Rps_Moves move = static_cast<Rps_Moves>(rand() % 3); 
+    return move;
+}
+void RockPaperScissor::setComputerMove(Rps_Moves computer) 
+{
+    computer = genCompMove();
+    computer_move = computer;
+}
 
 Rps_Moves RockPaperScissor::getComputerMove()const {return computer_move;}
 
