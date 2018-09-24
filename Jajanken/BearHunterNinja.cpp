@@ -18,7 +18,7 @@ Bhn_Moves BearHunterNinja::genCompMove()
 void BearHunterNinja::setComputerMove(Bhn_Moves comp)
 {
     comp = genCompMove();
-    computer_move = comp;;
+    computer_move = comp;
 }
 
 void BearHunterNinja::displayMove()
