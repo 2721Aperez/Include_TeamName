@@ -10,7 +10,7 @@ private:
     RockPaperScissor move;
     BearHunterNinja move_v2;
     void displaySelectedMove();
-    std::string snarkyComment();
+    // std::string snarkyComment();
 public:
     void selectMove(); 
     void selectMoveV2();
