@@ -28,3 +28,60 @@ void BearHunterNinja::displayMove()
 
 Bhn_Moves BearHunterNinja::getPlayerMove() const {return player_move;}
 Bhn_Moves BearHunterNinja::getComputerMove() const {return computer_move;}
+
+Bhn_Moves BearHunterNinja::compareMoves()
+{
+    Bhn_Moves player, comp, winner;
+    GameResults results;
+
+    player = getPlayerMove();
+    comp = getComputerMove();
+
+    switch(player)
+    {
+        case Bhn_Moves::BEAR:
+            if(comp == Bhn_Moves::BEAR){results.setTies(1);}
+            else if(comp == Bhn_Moves::HUNTER) 
+            {
+                results.addPlayerLoss(1);
+                results.addCompWin(1);
+            }
+            else if(comp == Bhn_Moves::NINJA)
+            {
+                results.addPlayerWin(1);
+                results.addCompLoss(1);
+            }
+        break;
+
+        case Bhn_Moves::HUNTER:
+            if(comp == Bhn_Moves::HUNTER){results.setTies(1);}
+            else if(comp == Bhn_Moves::NINJA) 
+            {
+                results.addPlayerLoss(1);
+                results.addCompWin(1);
+            }
+            else if(comp == Bhn_Moves::BEAR)
+            {
+                results.addPlayerWin(1);
+                results.addCompLoss(1);
+            }
+        break;
+
+        case Bhn_Moves::NINJA:
+            if(comp == Bhn_Moves::NINJA){results.setTies(1);}
+            else if(comp == Bhn_Moves::BEAR) 
+            {
+                results.addPlayerLoss(1);
+                results.addCompWin(1);
+            }
+            else if(comp == Bhn_Moves::HUNTER)
+            {
+                results.addPlayerWin(1);
+                results.addCompLoss(1);
+            }
+        break;
+
+    return player; //placeholder
+            
+    }
+}
