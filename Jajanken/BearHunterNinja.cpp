@@ -1,4 +1,4 @@
-#include "BearHunterNinja.h" 
+#include "BearHunterNinja.hpp" 
 
 void BearHunterNinja::displayRules()
 {
@@ -15,9 +15,9 @@ Bhn_Moves BearHunterNinja::genCompMove()
     return move;
 }
 
-void BearHunterNinja::setComputerMove(Bhn_Moves comp)
+void BearHunterNinja::setComputerMove()
 {
-    comp = genCompMove();
+    Bhn_Moves comp = genCompMove();
     computer_move = comp;
 }
 

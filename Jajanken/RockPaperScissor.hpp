@@ -6,14 +6,13 @@ class RockPaperScissor{
 private:
     Rps_Moves player_move, computer_move;
     Rps_Moves compareMoves();
-    void setComputerMove(Rps_Moves computer_move);
+    Rps_Moves genCompMove();
     void displayMoves();
 
 public:
     void displayRules();
     void setPlayerMove(Rps_Moves player_move);
-    
-    Rps_Moves genCompMove();
+    void setComputerMove();
     Rps_Moves getPlayerMove() const;
     Rps_Moves getComputerMove() const;
 

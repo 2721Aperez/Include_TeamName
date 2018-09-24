@@ -16,10 +16,10 @@ Rps_Moves RockPaperScissor::genCompMove()
 {
     Rps_Moves move = static_cast<Rps_Moves>(rand() % 3); 
     return move;
-}
-void RockPaperScissor::setComputerMove(Rps_Moves computer) 
+} 
+void RockPaperScissor::setComputerMove() 
 {
-    computer = genCompMove();
+    Rps_Moves computer = genCompMove();
     computer_move = computer;
 }
 
