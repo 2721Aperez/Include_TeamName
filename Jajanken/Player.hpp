@@ -1,18 +1,17 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
-#include "RockPaperScissor.hpp";
+#include "RockPaperScissor.hpp"
+#include "Rps_Moves.hpp"
 
-
-class Player 
+class Player
 {
-private: 
-    RockPaperScissor move;
-
-    void displaySelectedMove();
+private:
+    Rps_Moves move_;
 public:
-    // void selectGameMode();
-    void requestRules();
-    void selectMove();
+    Rps_Moves getMove() const;
+    void setMove(Rps_Moves);
+    void selectMove(Rps_Moves);
+    void displaySelectedMove();
 };
 #endif
