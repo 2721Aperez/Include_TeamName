@@ -1,4 +1,4 @@
-#include "Computer.h"
+#include "Computer.hpp"
 #include <algorithm>
 #include <cstdlib>
 void Computer::selectMove()

@@ -1,6 +1,6 @@
-#include "RockPaperScissor.h"
+#include "RockPaperScissor.hpp"
 #include "string"
-#include "GameResults.h"
+#include "GameResults.hpp"
 #include <iostream>
 
 void RockPaperScissor::displayRules()

@@ -1,8 +1,8 @@
 #ifndef COMPUTER_H_
 #define COMPUTER_H_
 
-#include "RockPaperScissor.h";
-#include "BearHunterNinja.h";
+#include "RockPaperScissor.hpp";
+#include "BearHunterNinja.hpp";
 #include <string>
 class Computer 
 {

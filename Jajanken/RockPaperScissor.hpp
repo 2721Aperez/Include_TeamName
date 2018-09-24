@@ -1,7 +1,7 @@
 #ifndef ROCKPAPERSCISSOR_H_
 #define ROCKPAPERSCISSOR_H_
 
-#include "Rps_Moves.h"
+#include "Rps_Moves.hpp"
 class RockPaperScissor{
 private:
     Rps_Moves player_move, computer_move;

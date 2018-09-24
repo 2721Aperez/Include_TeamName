@@ -1,8 +1,8 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
-#include "RockPaperScissor.h";
-#include "BearHunterNinja.h";
+#include "RockPaperScissor.hpp";
+#include "BearHunterNinja.hpp";
 
 class Player 
 {

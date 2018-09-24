@@ -1,8 +1,8 @@
 #ifndef BEARHUNTERNINJA_H_
 #define BEARHUNTERNINJA_H_
 
-#include "Bhn_Moves.h"
-#include "GameResults.h"
+#include "Bhn_Moves.hpp"
+#include "GameResults.hpp"
 #include <iostream>
 #include <cstdlib> 
 class BearHunterNinja{
