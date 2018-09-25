@@ -16,5 +16,6 @@ public:
     void compareMoves(Rps_Moves, Rps_Moves);
     RockPaperScissor();
     void displayRules();
+    void showEndGame();
 };
 #endif

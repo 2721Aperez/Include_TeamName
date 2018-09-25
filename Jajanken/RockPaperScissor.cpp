@@ -13,14 +13,18 @@ void RockPaperScissor::displayRules()
     std::cout << "Rock beats Scissors" << std::endl;
     std::cout << "Scissors beats Paper" << std::endl;
     std::cout << "Paper beats Rock" << std::endl;
+    std::cout<<'\n' << std::endl;
 }
 
 //void RockPaperScissor::setMoves()
 //{
 //    player_ = Player::getMove();
-//    comp_ = Computer::getMove();
+//    comp_ = Computer::getMove(); 
 //}
-
+void RockPaperScissor::showEndGame()
+{
+	results.displayResults();
+}
 void RockPaperScissor::compareMoves(Rps_Moves player, Rps_Moves computer)
 {
     player_ = player;

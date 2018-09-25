@@ -4,7 +4,7 @@
 class GameResults
 {
 private:
-    int player_wins, player_loss, comp_wins, comp_loss, ties, round_;
+    int player_wins, player_loss, comp_wins, comp_loss, ties_, round_;
 public:
     GameResults();
     void setPlayerWins(int);

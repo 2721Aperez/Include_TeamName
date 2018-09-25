@@ -6,7 +6,7 @@ GameResults::GameResults()
 	player_loss = 0;
 	comp_wins = 0;
 	comp_loss = 0;
-	ties = 0;
+	ties_ = 0;
 	round_ = 0;
 }
  void GameResults::setPlayerWins(int win)
@@ -72,11 +72,13 @@ GameResults::GameResults()
      else{
       std::cout << "Game tied with both the player and computer having " << getPlayerWins() << " wins.";
      }
+     std::cout<< "Ties: " << getTies() << std::endl;
+
  }
 
  void GameResults::displayRounds()
  {
-    std::cout << "Round: " << round_;
+    std::cout << "Round: " << round_ <<std::endl;
  }
 
  int GameResults::getPlayerWins() const
@@ -101,12 +103,13 @@ GameResults::GameResults()
 
  void GameResults::setTies(int ties)
  {
-    ties += ties;
+    ties_ += ties;
 
     std::cout<<"Tied" <<std::endl;
+    std::cout<< "Number of Ties " << getTies() << std::endl;
  }
 
  int GameResults::getTies() const
  {
-    return ties;
+    return ties_;
  }

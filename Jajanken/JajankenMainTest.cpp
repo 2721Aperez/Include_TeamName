@@ -10,7 +10,6 @@ int main()
 	Computer computer;
 	RockPaperScissor game;
 	char choice;
-//	Rps_Moves player_choice;
 
 	std::cout << "Would you like to see the rules? (Y) (N)" << std::endl;
 	std::cin >> choice;
@@ -25,35 +24,49 @@ int main()
 
 	if(toupper(choice) =='Y')
 	{
-		std::cout << "Select A B or C" << std::endl;
-		std::cout << "A) Rock " << std::endl;
-		std::cout << "B) Paper " << std::endl;
-		std::cout << "C) Scissors " << std::endl;
-		std::cin >> choice;
-
-
-		switch(toupper(choice))
+		int i = 0;
+		while(i < 20)
 		{
-		case 'A':
-			player.selectMove(Rps_Moves::ROCK);
-		break;
 
-		case 'B':
-			player.selectMove(Rps_Moves::PAPER);
-		break;
 
-		case 'C':
-			player.selectMove(Rps_Moves::SCISSORS);
-		break;
+			std::cout<< '\n' <<std::endl;
+			std::cout << "Select A B or C" << std::endl;
+			std::cout << "A) Rock " << std::endl;
+			std::cout << "B) Paper " << std::endl;
+			std::cout << "C) Scissors " << std::endl;
+			std::cin >> choice;
 
-		default: std::cout << "Not a Valid Option" <<std::endl;
-		break;
+
+			switch(toupper(choice))
+			{
+			case 'A':
+				player.selectMove(Rps_Moves::ROCK);
+				break;
+
+			case 'B':
+				player.selectMove(Rps_Moves::PAPER);
+				break;
+
+			case 'C':
+				player.selectMove(Rps_Moves::SCISSORS);
+				break;
+
+			default: std::cout << "Not a Valid Option" <<std::endl;
+			break;
 
 		}
-		computer.selectMove();
-		computer.displaySelectedMove();
-		player.displaySelectedMove();
-		game.compareMoves(player.getMove(), computer.getMove());
+
+			computer.selectMove();
+			computer.displaySelectedMove();
+			player.displaySelectedMove();
+			game.compareMoves(player.getMove(), computer.getMove());
+
+			std::cout<<'\n' <<std::endl;
+
+			i++;
+		}
+
+		game.showEndGame();
 
 
 	}
