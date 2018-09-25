@@ -38,5 +38,5 @@ void Player::selectMove(Rps_Moves move)
 
 void Player::displaySelectedMove()
 {
-    //cout << "Player move: " << move_ << endl;
+    std::cout << "Player move: " << move_ << endl;
 }

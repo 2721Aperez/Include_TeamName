@@ -13,11 +13,17 @@
  void GameResults::addPlayerWin(int win)
  {
     player_wins += win;
+
+    std::cout<< "You win" << std:: endl;
+    std::cout<< "Total wins " << getPlayerWins() << std::endl;
  }
 
  void GameResults::addPlayerLoss(int lose)
  {
     player_loss += lose;
+
+    std::cout<< "You Lose" << std:: endl;
+    std::cout<< "Total Losses " << getPlayerLoss() << std::endl;
  }
 
  void GameResults::addCompWin(int win)
@@ -87,6 +93,8 @@
  void GameResults::setTies(int ties)
  {
     ties += ties;
+
+    std::cout<<"Tied" <<std::endl;
  }
 
  int GameResults::getTies() const

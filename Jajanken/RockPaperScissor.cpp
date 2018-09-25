@@ -21,7 +21,7 @@ void RockPaperScissor::displayRules()
 //    comp_ = Computer::getMove();
 //}
 
-void RockPaperScissor::compareMoves(Rps_Moves player, Rps_Moves computer) 
+void RockPaperScissor::compareMoves(Rps_Moves player, Rps_Moves computer)
 {
     player_ = player;
     comp_ = computer;

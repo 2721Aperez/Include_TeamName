@@ -30,9 +30,9 @@ int main()
 		std::cout << "B) Paper " << std::endl;
 		std::cout << "C) Scissors " << std::endl;
 		std::cin >> choice;
-		toupper(choice);
 
-		switch(choice)
+
+		switch(toupper(choice))
 		{
 		case 'A':
 			player.selectMove(Rps_Moves::ROCK);
@@ -51,8 +51,10 @@ int main()
 
 		}
 		computer.selectMove();
+		computer.displaySelectedMove();
+		player.displaySelectedMove();
 		game.compareMoves(player.getMove(), computer.getMove());
- 
+
 
 	}
 	else
