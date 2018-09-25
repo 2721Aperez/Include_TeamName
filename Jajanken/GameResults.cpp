@@ -1,5 +1,14 @@
 #include "GameResults.hpp"
 
+GameResults::GameResults()
+{
+	player_wins = 0;
+	player_loss = 0;
+	comp_wins = 0;
+	comp_loss = 0;
+	ties = 0;
+	round_ = 0;
+}
  void GameResults::setPlayerWins(int win)
  {
     player_wins = win;

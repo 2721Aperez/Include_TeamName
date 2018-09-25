@@ -6,6 +6,7 @@ class GameResults
 private:
     int player_wins, player_loss, comp_wins, comp_loss, ties, round_;
 public:
+    GameResults();
     void setPlayerWins(int);
     void setPlayerLoss(int);
 
