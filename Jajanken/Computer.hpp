@@ -8,13 +8,13 @@
 class Computer
 {
 private:
-    Rps_Moves move_; 
+    Rps_Moves move_;
     // std::string snarkyComment();
-public:
-    Computer(); 
-    Rps_Moves getMove() const;
     void setMove(Rps_Moves);
-    void selectMove(Rps_Moves);
+public:
+    Computer();
+    Rps_Moves getMove() const;
+    void selectMove();
     void displaySelectedMove();
 };
 #endif

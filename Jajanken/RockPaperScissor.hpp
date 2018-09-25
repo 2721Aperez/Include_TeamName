@@ -4,15 +4,17 @@
 #include "Rps_Moves.hpp"
 #include "Player.hpp"
 #include "Computer.hpp"
+#include "GameResults.hpp"
 
 class RockPaperScissor{
 private:
     Rps_Moves player_;
     Rps_Moves comp_;
-    void setMoves();
-    Rps_Moves compareMoves();
+    GameResults results;
+//    void setMoves();
 public:
-    RockPaperScissor(); 
+    void compareMoves(Rps_Moves, Rps_Moves);
+    RockPaperScissor();
     void displayRules();
 };
 #endif

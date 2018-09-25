@@ -13,16 +13,16 @@ Rps_Moves Computer::getMove() const
 
 void Computer::displaySelectedMove()
 {
-    std::cout << "Computer move: " << move_ << std::endl;
+    //std::cout << "Computer move: " << move_ << std::endl;
 }
 
-void Computer::selectMove(Rps_Moves move)
+void Computer::selectMove() 
 {
-    move = static_cast<Rps_Moves>(rand() % 3);
-    setMove(move); 
+    Rps_Moves move = static_cast<Rps_Moves>(rand() % 3);
+    setMove(move);
 }
 
-void setMove(Rps_Moves move)
+void Computer::setMove(Rps_Moves move)
 {
-    Computer::move_ = move;
+    move_ = move;
 }

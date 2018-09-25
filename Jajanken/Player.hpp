@@ -8,9 +8,10 @@ class Player
 {
 private:
     Rps_Moves move_;
+//    RockPaperScissor player;
     void setMove(Rps_Moves);
 public:
-    Player(); 
+    Player();
     Rps_Moves getMove() const;
     void selectMove(Rps_Moves);
     void displaySelectedMove();
