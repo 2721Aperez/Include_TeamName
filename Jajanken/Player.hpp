@@ -10,6 +10,7 @@ private:
     Rps_Moves move_;
     void setMove(Rps_Moves);
 public:
+    Player(); 
     Rps_Moves getMove() const;
     void selectMove(Rps_Moves);
     void displaySelectedMove();

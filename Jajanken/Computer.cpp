@@ -1,6 +1,10 @@
 #include "Computer.hpp"
-#include <algorithm> //do we need these last two libraries?
 #include <cstdlib>
+
+Computer::Computer()
+{
+  
+}
 
 Rps_Moves Computer::getMove() const
 {

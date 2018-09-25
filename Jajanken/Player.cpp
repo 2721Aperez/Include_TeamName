@@ -3,6 +3,11 @@
 
 using namespace std;
 
+Player::Player()
+{
+  
+}
+
 Rps_Moves Player::getMove() const
 {
     return move_;
@@ -17,7 +22,7 @@ void Player::selectMove(Rps_Moves move)
 {
     switch(move)
     {
-        case ROCK: 
+        case ROCK:
             setMove(ROCK);
             break;
         case PAPER:
