@@ -3,6 +3,11 @@
 #include <string>
 #include <iostream>
 
+RockPaperScissor::RockPaperScissor()
+{
+  
+}
+
 void RockPaperScissor::displayRules()
 {
     std::cout << "Rock beats Scissors" << std::endl;

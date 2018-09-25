@@ -12,6 +12,7 @@ private:
     void setMoves();
     Rps_Moves compareMoves();
 public:
+    RockPaperScissor(); 
     void displayRules();
 };
 #endif

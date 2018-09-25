@@ -1,6 +1,10 @@
 #include "Computer.hpp"
-#include <algorithm> //do we need these last two libraries?
 #include <cstdlib>
+
+Computer::Computer()
+{
+  
+}
 
 Rps_Moves Computer::getMove() const
 {
@@ -15,7 +19,7 @@ void Computer::displaySelectedMove()
 void Computer::selectMove(Rps_Moves move)
 {
     Rps_Moves move = static_cast<Rps_Moves>(rand() % 3);
-    setMove(move); 
+    setMove(move);
 }
 
 void setMove(Rps_Moves move)
