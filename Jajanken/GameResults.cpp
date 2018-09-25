@@ -2,7 +2,7 @@
 
  void GameResults::setPlayerWins(int win)
  {
-    player_wins = wins;
+    player_wins = win;
  }
 
  void GameResults::setPlayerLoss(int lose)
@@ -27,7 +27,7 @@
 
  void GameResults::addCompLoss(int lose)
  {
-    comp_loss++;
+    comp_loss+=lose;
  }
 
  void GameResults::setCompWins(int win)
@@ -43,25 +43,25 @@
 
  void GameResults::setRound(int round)
  {
-     round += round;
+     round_ += round;
  }
 
  void GameResults::displayResults()
  {
      if(player_wins > comp_wins){
-      std::cout << "Player wins with a score of " << getPlayerWins() " to " << getCompWins() <<"!";
+      std::cout << "Player wins with a score of " << getPlayerWins() <<" to " << getCompWins() <<"!";
      }
      else if(comp_wins > player_wins){
-      std::cout << "Computer wins with a score of " << getCompWins() " to " << getPlayerWins() <<"!";
+      std::cout << "Computer wins with a score of " << getCompWins() << " to " << getPlayerWins() <<"!";
      }
      else{
-      std::count << "Game tied with both the player and computer having " << getPlayerWins() << " wins.";
+      std::cout << "Game tied with both the player and computer having " << getPlayerWins() << " wins.";
      }
  }
 
  void GameResults::displayRounds()
  {
-    std::cout << "Round: " << round;
+    std::cout << "Round: " << round_;
  }
 
  int GameResults::getPlayerWins() const
