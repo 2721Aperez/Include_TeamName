@@ -8,7 +8,7 @@
 class Computer
 {
 private:
-    Rps_Moves move_;
+    Rps_Moves move_; 
     // std::string snarkyComment();
 public:
     Rps_Moves getMove() const;

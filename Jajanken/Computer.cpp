@@ -14,11 +14,11 @@ void Computer::displaySelectedMove()
 
 void Computer::selectMove(Rps_Moves move)
 {
-    Rps_Moves move = static_cast<Rps_Moves>(rand() % 3);
+    move = static_cast<Rps_Moves>(rand() % 3);
     setMove(move); 
 }
 
 void setMove(Rps_Moves move)
 {
-    move_ = move;
+    move_ = move; 
 }
