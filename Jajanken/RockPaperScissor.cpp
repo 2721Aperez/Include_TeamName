@@ -5,7 +5,7 @@
 
 RockPaperScissor::RockPaperScissor()
 {
-  
+
 }
 
 void RockPaperScissor::displayRules()

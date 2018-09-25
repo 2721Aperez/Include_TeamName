@@ -3,7 +3,7 @@
 
 Computer::Computer()
 {
-  
+
 }
 
 Rps_Moves Computer::getMove() const
@@ -13,7 +13,7 @@ Rps_Moves Computer::getMove() const
 
 void Computer::displaySelectedMove()
 {
-    std::cout << "Computer move: " << move_ << endl;
+    std::cout << "Computer move: " << move_ << std::endl;
 }
 
 void Computer::selectMove(Rps_Moves move)
@@ -24,5 +24,5 @@ void Computer::selectMove(Rps_Moves move)
 
 void setMove(Rps_Moves move)
 {
-    move_ = move; 
+    Computer::move_ = move;
 }

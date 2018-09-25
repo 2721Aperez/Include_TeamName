@@ -1,11 +1,11 @@
-#include "Player.h"
+#include "Player.hpp"
 #include <string>
 
 using namespace std;
 
 Player::Player()
 {
-  
+
 }
 
 Rps_Moves Player::getMove() const
@@ -22,14 +22,14 @@ void Player::selectMove(Rps_Moves move)
 {
     switch(move)
     {
-        case ROCK:
-            setMove(ROCK);
+        case Rps_Moves::ROCK:
+            setMove(Rps_Moves::ROCK);
             break;
-        case PAPER:
-            setMove(PAPER);
+        case Rps_Moves::PAPER:
+            setMove(Rps_Moves::PAPER);
             break;
-        case SCISSORS:
-            setMove(Scissors);
+        case Rps_Moves::SCISSORS:
+            setMove(Rps_Moves::SCISSORS);
             break;
         default:
             break;
