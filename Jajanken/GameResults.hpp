@@ -4,7 +4,7 @@
 class GameResults
 {
 private:
-    int player_wins, player_loss, comp_wins, comp_loss, ties;
+    int player_wins, player_loss, comp_wins, comp_loss, ties, round;
 public:
     void setPlayerWins(int);
     void setPlayerLoss(int);
@@ -18,17 +18,19 @@ public:
     void setCompWins(int);
     void setCompLoss(int);
 
+    void setRound(int);
+
     void displayResults();
     void displayRounds();
 
-    void getPlayerWins() const;
-    void getPlayerLoss() const;
+    int getPlayerWins() const;
+    int getPlayerLoss() const;
 
-    void getCompWins() const;
-    void getCompLoss() const;
+    int getCompWins() const;
+    int getCompLoss() const;
 
     void setTies(int);
-    void getTies() const;
+    int getTies() const;
 
 };
 #endif
