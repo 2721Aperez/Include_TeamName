@@ -1,7 +1,6 @@
 #ifndef COMPUTER_H_
 #define COMPUTER_H_
 
-#include "RockPaperScissor.hpp";
 #include "Rps_Moves.hpp"
 #include <iostream>
 #include <string>
@@ -15,6 +14,6 @@ public:
     Rps_Moves getMove() const;
     void setMove(Rps_Moves);
     void selectMove(Rps_Moves);
-    void displaySelectedMove(); 
+    void displaySelectedMove();
 };
 #endif
