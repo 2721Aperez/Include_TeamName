@@ -19,7 +19,7 @@ void RockPaperScissor::displayRules()
 //void RockPaperScissor::setMoves()
 //{
 //    player_ = Player::getMove();
-//    comp_ = Computer::getMove(); 
+//    comp_ = Computer::getMove();
 //}
 void RockPaperScissor::showEndGame()
 {

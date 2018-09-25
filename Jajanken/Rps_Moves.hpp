@@ -1,9 +1,11 @@
 #ifndef RPS_MOVES_H_
 #define RPS_MOVES_H_
-
+#include "boost/assign/list_of.hpp"
+#include "boost/assert.hpp"
 #include <map>
 #include <iostream>
 
+using namespace boost::assign;
 
 enum class Rps_Moves
 {
