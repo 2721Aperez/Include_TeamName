@@ -8,9 +8,9 @@ class Player
 {
 private:
     Rps_Moves move_;
+    void setMove(Rps_Moves);
 public:
     Rps_Moves getMove() const;
-    void setMove(Rps_Moves);
     void selectMove(Rps_Moves);
     void displaySelectedMove();
 };
