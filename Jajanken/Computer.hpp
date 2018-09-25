@@ -3,6 +3,7 @@
 
 #include "RockPaperScissor.hpp";
 #include "Rps_Moves.hpp"
+#include <iostream>
 #include <string>
 
 class Computer 
