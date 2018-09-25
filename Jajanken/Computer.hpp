@@ -5,17 +5,15 @@
 #include "Rps_Moves.hpp"
 #include <string>
 
-class Computer 
+class Computer
 {
-private: 
-    RockPaperScissor move;
+private:
+    Rps_Moves move_;
     // std::string snarkyComment();
 public:
-    Rps_Moves getMove();
+    Rps_Moves getMove() const;
     void setMove(Rps_Moves);
-    void displaySelectedMove();
     void selectMove(Rps_Moves);
-
-
+    void displaySelectedMove(); 
 };
 #endif
