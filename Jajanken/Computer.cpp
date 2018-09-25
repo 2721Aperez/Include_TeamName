@@ -1,7 +1,35 @@
 #include "Computer.hpp"
-#include <algorithm>
+#include <algorithm> //do we need these last two libraries?
 #include <cstdlib>
-void Computer::selectMove() //For Rps
-{
-    move.setComputerMove();
-}
+
+ Rps_Moves Computer::getMove()
+ {
+     return move;
+ }
+
+ void Computer::displaySelectedMove()
+ {
+     std::cout << "Computer move: " << move;
+ }
+
+ void Computer::selectMove(Rps_Moves move)
+ {
+     switch(move){
+         case ROCK:
+             setMove(ROCK);
+             break;
+         case PAPER:
+             setMove(PAPER);
+             break;
+         case SCISSOR:
+             setMove(SCISSOR);
+             break;
+         default: break;
+     }
+
+ }
+
+ void setMove(Rps_Moves move)
+ {
+     move = move;
+ }
