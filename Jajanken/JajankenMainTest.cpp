@@ -27,9 +27,8 @@ int main()
 		int i = 0;
 		while(i < 20)
 		{
-
-
-			std::cout<< '\n' <<std::endl;
+			std::cout<< '\n';
+			game.showGame();
 			std::cout << "Select A B or C" << std::endl;
 			std::cout << "A) Rock " << std::endl;
 			std::cout << "B) Paper " << std::endl;
@@ -55,13 +54,13 @@ int main()
 			break;
 
 		}
-
 			computer.selectMove();
 			computer.displaySelectedMove();
 			player.displaySelectedMove();
+			std::cout<<std::endl;
 			game.compareMoves(player.getMove(), computer.getMove());
 
-			std::cout<<'\n' <<std::endl;
+			std::cout<<'\n';
 
 			i++;
 		}

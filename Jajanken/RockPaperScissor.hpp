@@ -11,11 +11,11 @@ private:
     Rps_Moves player_;
     Rps_Moves comp_;
     GameResults results;
-//    void setMoves();
 public:
     void compareMoves(Rps_Moves, Rps_Moves);
     RockPaperScissor();
     void displayRules();
     void showEndGame();
+    void showGame();
 };
 #endif

@@ -33,5 +33,7 @@ public:
     void setTies(int);
     int getTies() const;
 
+    void showStats();
+
 };
 #endif

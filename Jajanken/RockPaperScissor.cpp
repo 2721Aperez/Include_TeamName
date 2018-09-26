@@ -15,20 +15,15 @@ void RockPaperScissor::displayRules()
     std::cout << "Paper beats Rock" << std::endl;
     std::cout<<'\n' << std::endl;
 }
+void RockPaperScissor::showEndGame(){results.displayResults();}
+void RockPaperScissor::showGame() {results.displayRounds();}
 
-//void RockPaperScissor::setMoves()
-//{
-//    player_ = Player::getMove();
-//    comp_ = Computer::getMove();
-//}
-void RockPaperScissor::showEndGame()
-{
-	results.displayResults();
-}
 void RockPaperScissor::compareMoves(Rps_Moves player, Rps_Moves computer)
 {
     player_ = player;
     comp_ = computer;
+
+    results.setRound(1);
 
     switch(player_)
     {
