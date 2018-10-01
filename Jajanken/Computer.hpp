@@ -2,19 +2,17 @@
 #define COMPUTER_H_
 
 #include "Rps_Moves.hpp"
+#include "Player.cpp"
 #include <iostream>
 #include <string>
 
-class Computer
+class Computer : public Player
 {
-private:
-    Rps_Moves move_;
-    // std::string snarkyComment();
-    void setMove(Rps_Moves);
+// private:
+//     void snarky();
 public:
     Computer();
-    Rps_Moves getMove() const;
     void selectMove();
-    void displaySelectedMove();
 };
+
 #endif

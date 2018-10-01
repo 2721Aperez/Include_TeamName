@@ -18,23 +18,7 @@ void Player::setMove(Rps_Moves move)
     move_ = move;
 }
 
-void Player::selectMove(Rps_Moves move)
-{
-    switch(move)
-    {
-        case Rps_Moves::ROCK:
-            setMove(Rps_Moves::ROCK);
-            break;
-        case Rps_Moves::PAPER:
-            setMove(Rps_Moves::PAPER);
-            break;
-        case Rps_Moves::SCISSORS:
-            setMove(Rps_Moves::SCISSORS);
-            break;
-        default:
-            break;
-    }
-}
+
 
 void Player::displaySelectedMove()
 {
