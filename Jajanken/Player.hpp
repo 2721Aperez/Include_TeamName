@@ -12,7 +12,6 @@ private:
 public:
     Player();
     Rps_Moves getMove() const;
-    virtual void selectMove(Rps_Moves) = 0;
     void setMove(Rps_Moves);
     void displaySelectedMove(); 
 };

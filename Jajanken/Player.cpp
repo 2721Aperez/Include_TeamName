@@ -3,24 +3,10 @@
 
 using namespace std;
 
-Player::Player()
-{
+Player::Player(){}
 
-}
+Rps_Moves Player::getMove() const{return move_;}
 
-Rps_Moves Player::getMove() const
-{
-    return move_;
-}
+void Player::setMove(Rps_Moves move){move_ = move;}
 
-void Player::setMove(Rps_Moves move)
-{
-    move_ = move;
-}
-
-
-
-void Player::displaySelectedMove()
-{
-    std::cout << "Player move: " << move_ << endl;
-}
+void Player::displaySelectedMove(){std::cout << "Player move: " << move_ << endl;}

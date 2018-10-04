@@ -12,7 +12,7 @@ class Computer : public Player
 //     void snarky();
 public:
     Computer();
-    void selectMove();
+    void generateMove();
 };
 
 #endif

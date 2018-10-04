@@ -1,9 +1,6 @@
 #include "human.hpp"
 
-human::human()
-{
-
-}
+human::human(){}
 
 void human::selectMove(Rps_Moves move)
 { 
