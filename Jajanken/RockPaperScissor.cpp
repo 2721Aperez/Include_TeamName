@@ -4,9 +4,7 @@
 #include <iostream>
 
 RockPaperScissor::RockPaperScissor()
-{
-
-}
+{}
 
 void RockPaperScissor::displayRules()
 {
@@ -17,7 +15,6 @@ void RockPaperScissor::displayRules()
 }
 void RockPaperScissor::showEndGame(){results.displayResults();}
 void RockPaperScissor::showGame() {results.displayRounds();}
-
 void RockPaperScissor::compareMoves(Rps_Moves player, Rps_Moves computer)
 {
     player_ = player;
