@@ -1,7 +1,6 @@
 #include "Computer.hpp"
-#include <cstdlib>
 
-Computer::Computer(){}
+Computer::Computer() {}
 
 void Computer::generateMove()
 {

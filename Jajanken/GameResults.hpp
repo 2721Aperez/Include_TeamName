@@ -1,39 +1,41 @@
 #ifndef GAMERESULT_H_
 #define GAMERESULT_H_
 #include <iostream>
+#include <string>
+
 class GameResults
 {
 private:
-    int player_wins, player_loss, comp_wins, comp_loss, ties_, round_;
+	int player_wins, player_loss, comp_wins, comp_loss, ties_, round_;
 public:
-    GameResults();
-    void setPlayerWins(int);
-    void setPlayerLoss(int);
+	GameResults();
+	void setPlayerWins(int);
+	void setPlayerLoss(int);
 
-    void addPlayerWin(int);
-    void addPlayerLoss(int);
+	void addPlayerWin(int);
+	void addPlayerLoss(int);
 
-    void addCompWin(int);
-    void addCompLoss(int);
-    
-    void setCompWins(int);
-    void setCompLoss(int);
+	void addCompWin(int);
+	void addCompLoss(int);
 
-    void setRound(int);
+	void setCompWins(int);
+	void setCompLoss(int);
 
-    void displayResults();
-    void displayRounds();
+	void setRound(int);
 
-    int getPlayerWins() const;
-    int getPlayerLoss() const;
+	void displayResults();
+	void displayRounds();
 
-    int getCompWins() const;
-    int getCompLoss() const;
+	int getPlayerWins() const;
+	int getPlayerLoss() const;
 
-    void setTies(int);
-    int getTies() const;
+	int getCompWins() const;
+	int getCompLoss() const;
 
-    void showStats();
+	void setTies(int);
+	int getTies() const;
+
+	void showStats();
 
 };
 #endif

@@ -1,7 +1,6 @@
 #include "RockPaperScissor.hpp"
 #include "GameResults.hpp"
-#include <string>
-#include <iostream>
+
 
 RockPaperScissor::RockPaperScissor()
 {}

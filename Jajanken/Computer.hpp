@@ -2,17 +2,16 @@
 #define COMPUTER_H_
 
 #include "Rps_Moves.hpp"
-#include "Player.cpp"
-#include <iostream>
-#include <string>
+#include "Player.hpp"
+
 
 class Computer : public Player
 {
-// private:
-//     void snarky();
+	// private:
+	//     void snarky();
 public:
-    Computer();
-    void generateMove();
+	Computer();
+	void generateMove();
 };
 
 #endif

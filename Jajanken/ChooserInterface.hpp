@@ -12,26 +12,26 @@
 #include "Rps_Moves.hpp"
 #include "Player.hpp"
 
-class ChooserInterface{
+class ChooserInterface {
 public:
-    virtual void selectMove() = 0;
+	virtual void selectMove() = 0;
 };
 
-class RandomChooser : ChooserInterface{
+class RandomChooser : ChooserInterface {
 public:
-    void selectMove() override
-    {
-        Rps_Moves move = static_cast<Rps_Moves>(rand() % 2);
-        Player::setMove(move);
-    }
+	void selectMove() override
+	{
+		Rps_Moves move = static_cast<Rps_Moves>(rand() % 2);
+		Player::setMove(move);
+	}
 };
 
-class SmartChooser : ChooserInterface{
+class SmartChooser : ChooserInterface {
 public:
-    void selectMove() override
-    {
-        
-    }
+	void selectMove() override
+	{
+
+	}
 };
 
 #endif /* ChooserInterface_h */
