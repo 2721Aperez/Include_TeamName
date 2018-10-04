@@ -14,23 +14,24 @@
 
 class ChooserInterface {
 public:
-	virtual void selectMove() = 0;
+	virtual Rps_Moves selectMove() = 0;
 };
 
-class RandomChooser : ChooserInterface {
+class RandomChooser : public ChooserInterface {
 public:
-	void selectMove() override
+	Rps_Moves selectMove() override
 	{
-		Rps_Moves move = static_cast<Rps_Moves>(rand() % 2);
-		Player::setMove(move);
+		return static_cast<Rps_Moves>(rand() % 2);
 	}
 };
 
-class SmartChooser : ChooserInterface {
+class SmartChooser : public ChooserInterface {
 public:
-	void selectMove() override
+	Rps_Moves selectMove() override
 	{
+		Rps_Moves move;
 
+		return move;
 	}
 };
 
