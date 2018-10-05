@@ -1,8 +1,8 @@
 #ifndef COMPUTER_H_
 #define COMPUTER_H_
 
-#include "Rps_Moves.hpp"
 #include "Player.hpp"
+#include "Rps_Moves.hpp"
 #include"ChooserFactory.hpp"
 
 class Computer : public Player

@@ -10,7 +10,7 @@
 #define ChooserInterface_h
 
 #include "Rps_Moves.hpp"
-#include "Player.hpp"
+
 
 class ChooserInterface {
 public:
