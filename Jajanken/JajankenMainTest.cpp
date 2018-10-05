@@ -53,7 +53,7 @@ int main()
 			default: std::cout << "Not a Valid Option" <<std::endl;
 			break;
 
-		}
+			}
 			computer.selectMove();
 			computer.displaySelectedMove();
 			player.displaySelectedMove();
