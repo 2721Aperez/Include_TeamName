@@ -13,11 +13,11 @@ inline std::ostream& operator <<(std::ostream& ostr, const moves rps_move)
 {
     switch (rps_move)
     {
-        case ROCK:		std::cout << "Rock";				break;
+        case ROCK:		    std::cout << "Rock";				break;
         case PAPER: 		std::cout << "Paper";  				break;
-        case SCISSORS:	std::cout << "Scissors";            break;
+        case SCISSORS:	    std::cout << "Scissors";            break;
 
-        default:                    std::cout << "unspecified";
+        default:            std::cout << "unspecified";
     }
 
     return ostr;
