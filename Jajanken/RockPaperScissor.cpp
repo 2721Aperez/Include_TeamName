@@ -2,6 +2,7 @@
 #include "GameResults.hpp"
 
 
+
 RockPaperScissor::RockPaperScissor()
 {}
 
@@ -14,7 +15,7 @@ void RockPaperScissor::displayRules()
 }
 void RockPaperScissor::showEndGame(){results.displayResults();}
 void RockPaperScissor::showGame() {results.displayRounds();}
-void RockPaperScissor::compareMoves(Rps_Moves player, Rps_Moves computer)
+void RockPaperScissor::compareMoves(moves player, moves computer)
 {
     player_ = player;
     comp_ = computer;
@@ -23,45 +24,45 @@ void RockPaperScissor::compareMoves(Rps_Moves player, Rps_Moves computer)
 
     switch(player_)
     {
-        case Rps_Moves::ROCK:
-            if(comp_ == Rps_Moves::ROCK) {results.setTies(1);}
+        case moves::ROCK:
+            if(comp_ == moves::ROCK) {results.setTies(1);}
 
-            else if(comp_ == Rps_Moves::PAPER)
+            else if(comp_ == moves::PAPER)
             {
                 results.addPlayerLoss(1);
                 results.addCompWin(1);
 
             }
-            else if(comp_ == Rps_Moves::SCISSORS)
+            else if(comp_ == moves::SCISSORS)
             {
                 results.addPlayerWin(1);
                 results.addCompLoss(1);
             }
         break;
 
-        case Rps_Moves::PAPER:
-            if(comp_ == Rps_Moves::PAPER) {results.setTies(1);}
+        case moves::PAPER:
+            if(comp_ == moves::PAPER) {results.setTies(1);}
 
-            else if(comp_ == Rps_Moves::SCISSORS)
+            else if(comp_ == moves::SCISSORS)
             {
                 results.addPlayerLoss(1);
                 results.addCompWin(1);
             }
-            else if(comp_ == Rps_Moves::ROCK)
+            else if(comp_ == moves::ROCK)
             {
                 results.addPlayerWin(1);
                 results.addCompLoss(1);
             }
         break;
-        case Rps_Moves::SCISSORS:
-            if(comp_ == Rps_Moves::SCISSORS) {results.setTies(1);}
+        case moves::SCISSORS:
+            if(comp_ == moves::SCISSORS) {results.setTies(1);}
 
-            else if(comp_ == Rps_Moves::ROCK)
+            else if(comp_ == moves::ROCK)
             {
                 results.addPlayerLoss(1);
                 results.addCompWin(1);
             }
-            else if(comp_ == Rps_Moves::PAPER)
+            else if(comp_ == moves::PAPER)
             {
                 results.addPlayerWin(1);
                 results.addCompLoss(1);

@@ -8,12 +8,12 @@
 class Player
 {
 private:
-	Rps_Moves move_;
+	moves move_;
 
 public:
 	Player();
-	Rps_Moves getMove() const;
-	void setMove(Rps_Moves);
+	moves getMove() const;
+	void setMove(moves);
 	void displaySelectedMove();
 };
 #endif

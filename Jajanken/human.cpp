@@ -2,4 +2,4 @@
 
 human::human(){}
 
-void human::selectMove(Rps_Moves move) {setMove(move);}
+void human::selectMove(moves move) {setMove(move);}

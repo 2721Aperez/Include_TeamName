@@ -1,4 +1,3 @@
-#pragma once
 #include "ChooserInterface.hpp"
 
 class ChooserFactory

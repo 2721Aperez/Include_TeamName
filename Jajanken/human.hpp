@@ -7,7 +7,7 @@ class human:public Player
 {
 public:
     human();
-    void selectMove(Rps_Moves);
+    void selectMove(moves);
 };
 
 #endif

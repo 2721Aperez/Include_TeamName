@@ -8,11 +8,11 @@
 
 class RockPaperScissor{
 private:
-    Rps_Moves player_;
-    Rps_Moves comp_;
+    moves player_;
+    moves comp_;
     GameResults results;
 public:
-    void compareMoves(Rps_Moves, Rps_Moves);
+    void compareMoves(moves, moves);
     RockPaperScissor();
     void displayRules();
     void showEndGame();

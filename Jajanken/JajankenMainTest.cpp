@@ -39,15 +39,15 @@ int main()
 			switch(toupper(choice))
 			{
 			case 'A':
-				player.selectMove(Rps_Moves::ROCK);
+				player.selectMove(moves::ROCK);
 				break;
 
 			case 'B':
-				player.selectMove(Rps_Moves::PAPER);
+				player.selectMove(moves::PAPER);
 				break;
 
 			case 'C':
-				player.selectMove(Rps_Moves::SCISSORS);
+				player.selectMove(moves::SCISSORS);
 				break;
 
 			default: std::cout << "Not a Valid Option" <<std::endl;
