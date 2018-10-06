@@ -17,22 +17,4 @@ public:
 	virtual moves selectMove() = 0;
 };
 
-class RandomChooser : public ChooserInterface {
-public:
-	moves selectMove()
-	{
-		return static_cast<moves>(rand() % 3);
-	}
-};
-
-class SmartChooser : public ChooserInterface {
-public:
-	moves selectMove() override
-	{
-		moves move;
-
-		return move;
-	}
-};
-
 #endif /* ChooserInterface_h */
