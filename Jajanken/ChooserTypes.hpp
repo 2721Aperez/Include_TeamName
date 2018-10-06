@@ -34,8 +34,8 @@ public:
 	{
 		moves move;	
 		int frequency = 0;
-		std::multimap<std::string, int> mymap;
-		std::multimap<std::string, int>::iterator it;
+		int frequency2 = 0;
+		std::string stored ="";
 		std::string str, numb_str;
 		std::ifstream myfile;
 		myfile.open("data.txt");
@@ -45,21 +45,31 @@ public:
 		{
 			getline(myfile, str);
 			numb_str = str.substr(str.find(":") + 1);
-			str.erase(str.find(":"));
+			str.erase(str.find(":") );
 			frequency = stoi(numb_str);
-			mymap.insert(std::pair<std::string, int>(str, frequency));
-		}
-		if(mymap.find(list) == mymap.end()){move = static_cast<moves>(rand() % 3);}
-		else
-		{
-			int freq = 0;
-			for (it = mymap.begin(); it != mymap.end(); it++)
+
+			if (str.find(list) != std::string::npos)
 			{
-				if(it ->first == list)
-				{
-					freq = (freq < it->second) ? it->second:freq;
+				if (frequency2 < frequency)
+				{ 
+					frequency2 = frequency;
+					stored = str;	
 				}
 			}
+		}
+		int length = stored.length()-1;
+		switch (stored[length])
+		{
+		case 'R':
+			move = PAPER;
+			break;
+		case 'P':
+			move = SCISSORS;
+			break;
+		case 'S':
+			move = ROCK;
+			break;
+		default: move = static_cast<moves>(rand() % 3);
 
 		}
 
