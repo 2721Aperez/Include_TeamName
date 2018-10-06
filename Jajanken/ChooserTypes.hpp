@@ -11,8 +11,7 @@
 #include "Rps_Moves.hpp"
 #include "ChooserInterface.hpp"
 #include <fstream>
-#include <map>
-#include <vector>
+
 
 class RandomChooser : public ChooserInterface {
 public:
