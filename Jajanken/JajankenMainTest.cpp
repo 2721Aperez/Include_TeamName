@@ -1,20 +1,29 @@
 #include <iostream>
 #include <fstream>
+#include <map>
+#include <string>
 #include "Player.hpp"
 #include "Computer.hpp"
 #include "GameResults.hpp"
 #include "Rps_Moves.hpp"
 #include "RockPaperScissor.hpp"
 
+void writeFile(std::ofstream &file, std::map<std::string, int> record);
+void storeString(std::map<std::string, int> &record, std::string pattern);
+
 int main()
 {
     Player player;
     Computer computer;
     RockPaperScissor game;
-    char choice;
     
-    std::ofstream file;
-    file.open("data.txt");
+    std::map<std::string, int> records;
+    
+    char choice;
+    int count = 0;
+    
+    std::string pattern;
+    std::string str;
     
     std::cout << "Would you like to see the rules? (Y) (N)" << std::endl;
     std::cin >> choice;
@@ -40,41 +49,52 @@ int main()
             std::cout << "C) Scissors " << std::endl;
             std::cin >> choice;
             
-            //file << choice;
-            
-            
             switch(toupper(choice))
             {
-                case 'A':
-                    player.setMove(moves::ROCK);
-                    break;
-                    
-                case 'B':
-                    player.setMove(moves::PAPER);
-                    break;
-                    
-                case 'C':
-                    player.setMove(moves::SCISSORS);
-                    break;
-                    
-                default: std::cout << "Not a Valid Option" <<std::endl;
-                    break;
-                    
+                    if(count == 3)
+                    {
+                        str = pattern;
+                        //some function to pass str to Computer for prediction
+                    }
+                    if(count < 5){
+                    case 'A':
+                        player.setMove(moves::ROCK);
+                        pattern += 'R';
+                        count++;
+                        break;
+                        
+                    case 'B':
+                        player.setMove(moves::PAPER);
+                        pattern += 'P';
+                        count++;
+                        break;
+                        
+                    case 'C':
+                        player.setMove(moves::SCISSORS);
+                        pattern += 'S';
+                        count++;
+                        break;
+                        
+                    default: std::cout << "Not a Valid Option" <<std::endl;
+                        break;
+                    }
+                    else{
+                        storeString(records, pattern);
+                        count = 0;
+                    }
             }
+            
             computer.generateMove();
             //computer.displaySelectedMove();
             player.displaySelectedMove();
             std::cout<<std::endl;
             //game.compareMoves(player.getMove(), computer.getMove());
-            
-            std::cout<<'\n';
+            std::cout<<std::endl;
             
             i++;
         }
         
         game.showEndGame();
-        
-        
     }
     else
     {
@@ -82,9 +102,48 @@ int main()
         return 0;
     }
     
+    std::ofstream file;
+    file.open("data.txt");
+    
+    if(file.is_open())
+    {
+        writeFile(file, records);
+    }
+    else
+    {
+        std::cout << "Error opening file" << std::endl;
+    }
+    
     file.close();
     
     return 0;
     
+}
+
+void storeString(std::map<std::string, int> &record, std::string pattern)
+{
+    std::map<std::string, int>::iterator it;
+    
+    it = record.find(pattern);
+    if(it != record.end()) // the word string exists
+    {
+        record[pattern]++;
+    }
+    else
+    {
+        record.insert(std::pair<std::string, int>(pattern, 1));
+    }
+}
+
+void writeFile(std::ofstream &file, std::map<std::string, int> record)
+{
+    std::map<std::string, int>::iterator it;
+    for(it = record.begin(); it != record.end(); ++it)
+    {
+        file << it->first;
+        file << ":";
+        file << it->second;
+        file << std::endl;
+    }
 }
 
