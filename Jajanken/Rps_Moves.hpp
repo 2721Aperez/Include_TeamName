@@ -2,6 +2,7 @@
 #define RPS_MOVES_H_
 
 #include <iostream>
+#include <string>
 
 
 enum moves
