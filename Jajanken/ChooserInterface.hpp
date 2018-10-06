@@ -29,7 +29,25 @@ class SmartChooser : public ChooserInterface {
 public:
 	moves selectMove() override
 	{
-		moves move;
+		moves move;	
+		int frequency = 0;
+		std::string str, numb_str;
+		std::ifstream myfile;
+		myfile.open("data.txt");
+
+		if (!myfile) {return;}
+		
+		while (myfile)
+		{
+			getline(myfile, str);
+			numb_str = str.substr(str.find(":") + 1);
+			str.erase(str.find(":"));
+			frequency = stoi(numb_str);
+			
+		}
+
+
+		myfile.close();
 
 		return move;
 	}
