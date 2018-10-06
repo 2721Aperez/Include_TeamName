@@ -3,7 +3,8 @@
 
 #include "Player.hpp"
 #include "Rps_Moves.hpp"
-#include"ChooserFactory.hpp"
+#include "ChooserFactory.hpp"
+
 
 class Computer : public Player
 {
@@ -12,6 +13,8 @@ class Computer : public Player
 public:
 	Computer();
 	void generateMove();
+	friend ChooserInterface *ChooserFactory::make_chooser(std::string);
+
 };
 
 #endif
