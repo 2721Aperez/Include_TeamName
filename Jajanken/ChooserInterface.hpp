@@ -11,6 +11,7 @@
 
 #include <fstream>
 #include <map>
+#include <vector>
 #include "Rps_Moves.hpp"
 
 class ChooserInterface {
@@ -20,15 +21,21 @@ public:
 
 class RandomChooser : public ChooserInterface {
 public:
-	moves selectMove() override
+	moves selectMove()
 	{
 		return static_cast<moves>(rand() % 3);
 	}
 };
 
 class SmartChooser : public ChooserInterface {
+private:
+	std::vector<std::string> myVec;
 public:
-	moves selectMove() override
+	void setList(std::vector<std::string> &list)
+	{
+		myVec = list;
+	}
+	moves selectMove() 
 	{
 		moves move;	
 		int frequency = 0;
@@ -47,6 +54,7 @@ public:
 			frequency = stoi(numb_str);
 			mymap.insert(std::pair<std::string, int>(str, frequency));
 		}
+
 
 
 		myfile.close();
