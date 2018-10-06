@@ -29,11 +29,11 @@ public:
 
 class SmartChooser : public ChooserInterface {
 private:
-	std::vector<std::string> myVec;
+	std::string list;
 public:
-	void setList(std::vector<std::string> &list)
+	void setList(std::string str)
 	{
-		myVec = list;
+		list = str;
 	}
 	moves selectMove() 
 	{
@@ -44,7 +44,6 @@ public:
 		std::ifstream myfile;
 		myfile.open("data.txt");
 
-		if (!myfile) {return;}
 		
 		while (myfile)
 		{
@@ -54,6 +53,9 @@ public:
 			frequency = stoi(numb_str);
 			mymap.insert(std::pair<std::string, int>(str, frequency));
 		}
+		if(mymap.find(str) == mymap.end()){move = static_cast<moves>(rand() % 3);}
+
+
 
 
 
