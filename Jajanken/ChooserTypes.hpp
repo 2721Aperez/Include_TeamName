@@ -25,22 +25,23 @@ public:
 class SmartChooser : public ChooserInterface {
 private:
 	std::string list;
-
 public:
 	void setList(std::string str)
 	{
 		list = str;
 	}
-	moves selectMove()
+	moves selectMove() 
 	{
-		moves move;
+		moves move;	
 		int frequency = 0;
-		std::map<std::string, int> mymap;
+		std::multimap<std::string, int> mymap;
+		std::multimap<std::string, int>::iterator it;
 		std::string str, numb_str;
 		std::ifstream myfile;
 		myfile.open("data.txt");
 
-		while(myfile)
+		
+		while (myfile)
 		{
 			getline(myfile, str);
 			numb_str = str.substr(str.find(":") + 1);
@@ -48,8 +49,23 @@ public:
 			frequency = stoi(numb_str);
 			mymap.insert(std::pair<std::string, int>(str, frequency));
 		}
-		if(mymap.find(str) == mymap.end()){move = static_cast<moves>(rand() % 3);}
+		if(mymap.find(list) == mymap.end()){move = static_cast<moves>(rand() % 3);}
+		else
+		{
+			int freq = 0;
+			for (it = mymap.begin(); it != mymap.end(); it++)
+			{
+				if(it ->first == list)
+				{
+					freq = (freq < it->second) ? it->second:freq;
+				}
+			}
 
+		}
+
+		myfile.close();
+
+		return move;
 	}
 };
 

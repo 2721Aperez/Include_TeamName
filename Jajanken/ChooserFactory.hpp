@@ -1,4 +1,5 @@
 #include "ChooserInterface.hpp"
+#include "ChooserTypes.hpp" 
 
 class ChooserFactory
 {
