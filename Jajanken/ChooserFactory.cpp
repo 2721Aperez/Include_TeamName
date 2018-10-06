@@ -1,4 +1,5 @@
 #include "ChooserFactory.hpp"
+#include "ChooserTypes.hpp"
 
 ChooserInterface *ChooserFactory::make_chooser(std::string choice)
 {

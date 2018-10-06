@@ -14,7 +14,7 @@ public:
 	Computer();
 	void generateMove();
 	friend ChooserInterface *ChooserFactory::make_chooser(std::string);
-
+	void setInterface(std::string);
 };
 
 #endif

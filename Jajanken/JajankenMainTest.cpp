@@ -16,29 +16,42 @@ int main()
     Player player;
     Computer computer;
     RockPaperScissor game;
-    
+
     std::map<std::string, int> records;
-    
+
     char choice;
     int count = 0;
-    
+
     std::string pattern;
     std::string str;
-    
+
     std::cout << "Would you like to see the rules? (Y) (N)" << std::endl;
     std::cin >> choice;
-    
+
     if(toupper(choice) == 'Y')
     {
         game.displayRules();
     }
-    
+
     std::cout<<"Play Rock Paper Scissors? (Y) (N)" << std::endl;
     std::cin >> choice;
-    
+
     if(toupper(choice) =='Y')
     {
         int i = 0;
+        std::cout << "Please select a difficulty" << std::endl;
+        std::cout << "A) Easy" << std::endl;
+        std::cout << "B) Hard" << std::endl;
+        std::cin >> choice;
+        switch(toupper(choice)){
+        	case 'A': computer.setInterface("random");
+        			  break;
+        	case 'B': computer.setInterface("smart");
+        			  break;
+        	default: std::cout << "Invalid selection, we choose hard." << std::endl;
+        			 computer.setInterface("smart");
+        			 break;
+        }
         while(i < 20)
         {
             std::cout<< '\n';
@@ -48,7 +61,7 @@ int main()
             std::cout << "B) Paper " << std::endl;
             std::cout << "C) Scissors " << std::endl;
             std::cin >> choice;
-            
+
             switch(toupper(choice))
             {
                     if(count == 3)
@@ -62,19 +75,19 @@ int main()
                         pattern += 'R';
                         count++;
                         break;
-                        
+
                     case 'B':
                         player.setMove(moves::PAPER);
                         pattern += 'P';
                         count++;
                         break;
-                        
+
                     case 'C':
                         player.setMove(moves::SCISSORS);
                         pattern += 'S';
                         count++;
                         break;
-                        
+
                     default: std::cout << "Not a Valid Option" <<std::endl;
                         break;
                     }
@@ -83,17 +96,17 @@ int main()
                         count = 0;
                     }
             }
-            
+
             computer.generateMove();
             //computer.displaySelectedMove();
             player.displaySelectedMove();
             std::cout<<std::endl;
             //game.compareMoves(player.getMove(), computer.getMove());
             std::cout<<std::endl;
-            
+
             i++;
         }
-        
+
         game.showEndGame();
     }
     else
@@ -101,10 +114,10 @@ int main()
         std::cout<<"Goodbye" << std::endl;
         return 0;
     }
-    
+
     std::ofstream file;
     file.open("data.txt");
-    
+
     if(file.is_open())
     {
         writeFile(file, records);
@@ -113,17 +126,17 @@ int main()
     {
         std::cout << "Error opening file" << std::endl;
     }
-    
+
     file.close();
-    
+
     return 0;
-    
+
 }
 
 void storeString(std::map<std::string, int> &record, std::string pattern)
 {
     std::map<std::string, int>::iterator it;
-    
+
     it = record.find(pattern);
     if(it != record.end()) // the word string exists
     {
