@@ -2,15 +2,21 @@
 
 Computer::Computer() {}
 
-
-
-void Computer::generateMove()
+void Computer::generateMove(std::string setting)
 {
+	moves rps_move;
+	ChooserFactory move_type;
+	ChooserInterface *choose_type;
 
+	choose_type = move_type.make_chooser(setting);
+
+	rps_move = choose_type->selectMove();
+
+	Player::setMove(rps_move);
 }
 
-void Computer::setInterface(std::string choice)
+moves Computer::getMove()const
 {
-	*ChooserFactory::make_chooser(choice);
+	moves move;
+	return move = Player::getMove();
 }
-

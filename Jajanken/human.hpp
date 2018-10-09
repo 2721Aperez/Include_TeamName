@@ -3,11 +3,11 @@
 
 #include "Player.hpp"
 
-class human:public Player
+class human :public Player
 {
 public:
-    human();
-    void selectMove(moves);
+	human();
+	void selectMove(moves);
 };
 
 #endif

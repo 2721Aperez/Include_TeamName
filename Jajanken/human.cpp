@@ -1,5 +1,5 @@
 #include "human.hpp"
 
-human::human(){}
+human::human() {}
 
-void human::selectMove(moves move) {setMove(move);}
+void human::selectMove(moves move) { setMove(move); }
