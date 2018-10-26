@@ -8,6 +8,7 @@
 #include "Rps_Moves.hpp"
 #include "RockPaperScissor.hpp"
 
+
 void writeFile(std::map<std::string, int> &record);
 void storeString(std::map<std::string, int> &record, std::string pattern);
 std::ostream& operator<<(std::ostream& stream, std::map<std::string, int> &map);
@@ -17,6 +18,8 @@ int main()
 	human player;
 	Computer computer;
 	RockPaperScissor game;
+	SmartChooser smarty;
+
 	int setting = 0;
 	std::string difficulty;
 
@@ -40,17 +43,19 @@ int main()
 	std::cout << "Play Rock Paper Scissors? (Y) (N)" << std::endl;
 	std::cin >> choice;
 
-	//Difficulty setting 
-	std::cout << "Select difficulty: 1)Easy 2)Hard" << std::endl;
-	std::cin >> setting;
-	if (setting == 1) { difficulty = "random"; }
-	else if (setting == 2) { difficulty = "smart"; }
-	//End Difficulty Setting
+
 
 
 	if (toupper(choice) == 'Y')
 	{
 		int i = 0;
+
+		//Difficulty setting 
+		std::cout << "Select difficulty: 1)Easy 2)Hard" << std::endl;
+		std::cin >> setting;
+		if (setting == 1) { difficulty = "random"; }
+		else if (setting == 2) { difficulty = "smart"; }
+		//End Difficulty Setting
 
 		while (i < 20)
 		{
@@ -62,10 +67,12 @@ int main()
 			std::cout << "C) Scissors " << std::endl;
 			std::cin >> choice;
 
-			if (count < 5) {
+			if (count < 5)
+			{
 				if (count == 3)
 				{
 					str = pattern;
+					smarty.setList(str);
 					//some function to pass str to Computer for prediction
 				}
 				switch (toupper(choice))
@@ -94,6 +101,7 @@ int main()
 				computer.generateMove(difficulty);
 
 				comp_choice = computer.getMove(); 
+
 				switch (comp_choice)
 				{
 					case moves::ROCK:
@@ -116,6 +124,7 @@ int main()
 			{
 				storeString(records, pattern);
 				count = 0;
+				pattern = "";
 			}
 
 			std::cout << "Computer Move: " << computer.getMove() << std::endl;
@@ -136,7 +145,6 @@ int main()
 
 	writeFile(records);
 
-	system("PAUSE");
 	return 0;
 }
 
@@ -172,7 +180,7 @@ std::ostream& operator<<(std::ostream& stream, std::map<std::string, int> &map)
 void writeFile(std::map<std::string, int> &record)
 {
 	std::ofstream file;
-	file.open("data.txt");
+	file.open("data.txt", std::fstream::app);
 
 	if (file.is_open())
 	{
@@ -185,6 +193,5 @@ void writeFile(std::map<std::string, int> &record)
 
 	file.close();
 }
-
 
 
