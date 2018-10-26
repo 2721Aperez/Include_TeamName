@@ -47,6 +47,7 @@ public:
 		while (myfile)
 		{
 			getline(myfile, str);
+			if (str.empty()) { break; }
 			numb_str = str.substr(str.find(":") + 1);
 			str.erase(str.find(":") );
 			frequency = std::stoi(numb_str);
