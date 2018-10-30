@@ -8,7 +8,6 @@
 #include "Rps_Moves.hpp"
 #include "RockPaperScissor.hpp"
 
-
 void writeFile(std::map<std::string, int> &record);
 void storeString(std::map<std::string, int> &record, std::string pattern);
 std::ostream& operator<<(std::ostream& stream, std::map<std::string, int> &map);
@@ -145,6 +144,7 @@ int main()
 
 	writeFile(records);
 
+	system("PAUSE");
 	return 0;
 }
 

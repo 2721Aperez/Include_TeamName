@@ -43,7 +43,10 @@ public:
 		std::ifstream myfile;
 		myfile.open("data.txt");
 
-		
+		if (list == "")
+		{
+			return static_cast<moves>(rand() % 3);
+		}
 		while (myfile)
 		{
 			getline(myfile, str);
