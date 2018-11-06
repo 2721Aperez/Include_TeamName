@@ -56,7 +56,7 @@ int main()
 		else if (setting == 2) { difficulty = "smart"; }
 		//End Difficulty Setting
 
-		while (i < 20)
+		while (i++ < 20)
 		{
 			std::cout << '\n';
 			game.showGame();
@@ -131,7 +131,6 @@ int main()
 			std::cout << std::endl;
 			game.compareMoves(player.getMove(), computer.getMove());
 			std::cout << std::endl;
-			i++;
 		}
 
 		game.showEndGame();
